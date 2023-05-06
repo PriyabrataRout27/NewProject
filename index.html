@@ -16,10 +16,13 @@
         <input type="text" class="form-control mr-2">
         <input type="submit" class="btn btn-dark" value="Submit">
       </form>
-    <ul>
+      <h2 class="title">Items</h2>
+      <ul id="items" class="list-group">
         <li class="list-group-item">First Elements</li>
         <li class="list-group-item">Second Elements</li>
         <li class="list-group-item">Third Elements</li>
+        <li class="list-group-item">Fourth Elements</li>
+        <li class="list-group-item">fivth Elements</li>
         <!-- <li>Aju</li>
         <li>mantu</li> -->
     </ul>
@@ -82,22 +85,51 @@
     //}
 
     //GETELEMENTBYTagName
-    var li=document.getElementsByTagName('li');
-    console.log(li);
-    console.log(li[1]);
-    li[2].textContent='Hello 3';
-    li[2].style.fontWeight='bold';
-    li[2].style.backgroundColor='yellow';
-    for(var i=0;i<li.length;i++){
-    li[i].style.backgroundColor='#f4f4f4'
-    }
+    // var li=document.getElementsByTagName('li');
+    // console.log(li);
+    // console.log(li[1]);
+    // li[2].textContent='Hello 3';
+    // li[2].style.fontWeight='bold';
+    // li[2].style.backgroundColor='yellow';
+    // for(var i=0;i<li.length;i++){
+    // li[i].style.backgroundColor='#f4f4f4'
+    // }
 
     //QUERYSELECTER
-    // var header = document.querySelector('#main-header');
-    // header.style.borderBottom='solid 4px #ccc';
+    var header = document.querySelector('#main-header');
+    header.style.borderBottom='solid 4px #ccc';
 
-    // var input= document.querySelector('input');
-    // input.value='Hello World';
+    var input= document.querySelector('input');
+    input.value='Hello World';
+    var submit=document.querySelector('input[type="submit"]');
+    submit.value='SEND';
+
+    var item=document.querySelector('.list-group-item');
+    item.style.color='red';
+    
+    var lastItem=document.querySelector('.list-group-item:last-child');
+    lastItem.style.color='blue';
+    var secondItem=document.querySelector('.list-group-item:nth-child(2)');
+    secondItem.style.color='green';
+
+    //querySelectorALL
+    var title=document.querySelectorAll('.title');
+    console.log(title);
+
+    title[0].textContent='Hello';
+
+    var odd= document.querySelectorAll('li:nth-child(odd)');
+    var even= document.querySelectorAll('li:nth-child(odd)'); 
+
+    for(var i=0;i<odd.length;i++){
+        odd[i].style.backgroundColor='#f4f4f4'
+        even[i].style.backgroundColor='#ccc'
+
+    }
+
+    
+    
+   
 
 
       
