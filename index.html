@@ -17,8 +17,7 @@
         <input type="submit" class="btn btn-dark" value="Submit">
       </form>
       <h2 class="title">Items</h2>
-      <ul id="items" class="list-group">
-        <li class="list-group-item">First Elements</li>
+      <ul id="items" class="list-group"><li class="list-group-item">First Elements</li>
         <li class="list-group-item">Second Elements</li>
         <li class="list-group-item">Third Elements</li>
         <li class="list-group-item">Fourth Elements</li>
@@ -96,36 +95,98 @@
     // }
 
     //QUERYSELECTER
-    var header = document.querySelector('#main-header');
-    header.style.borderBottom='solid 4px #ccc';
+    // var header = document.querySelector('#main-header');
+    // header.style.borderBottom='solid 4px #ccc';
 
-    var input= document.querySelector('input');
-    input.value='Hello World';
-    var submit=document.querySelector('input[type="submit"]');
-    submit.value='SEND';
+    // var input= document.querySelector('input');
+    // input.value='Hello World';
+    // var submit=document.querySelector('input[type="submit"]');
+    // submit.value='SEND';
 
-    var item=document.querySelector('.list-group-item');
-    item.style.color='red';
+    // var item=document.querySelector('.list-group-item');
+    // item.style.color='red';
     
-    var lastItem=document.querySelector('.list-group-item:last-child');
-    lastItem.style.color='blue';
-    var secondItem=document.querySelector('.list-group-item:nth-child(2)');
-    secondItem.style.color='green';
+    // var lastItem=document.querySelector('.list-group-item:last-child');
+    // lastItem.style.color='blue';
+    // var secondItem=document.querySelector('.list-group-item:nth-child(2)');
+    // secondItem.style.color='green';
 
-    //querySelectorALL
-    var title=document.querySelectorAll('.title');
-    console.log(title);
+    // //querySelectorALL
+    // var title=document.querySelectorAll('.title');
+    // console.log(title);
 
-    title[0].textContent='Hello';
+    // title[0].textContent='Hello';
 
-    var odd= document.querySelectorAll('li:nth-child(odd)');
-    var even= document.querySelectorAll('li:nth-child(odd)'); 
+    // var odd= document.querySelectorAll('li:nth-child(odd)');
+    // var even= document.querySelectorAll('li:nth-child(odd)'); 
 
-    for(var i=0;i<odd.length;i++){
-        odd[i].style.backgroundColor='#f4f4f4'
-        even[i].style.backgroundColor='#ccc'
+    // for(var i=0;i<odd.length;i++){
+    //     odd[i].style.backgroundColor='#f4f4f4'
+    //     even[i].style.backgroundColor='#ccc'
 
-    }
+    // }
+    //TRAVERSING
+    // items.style.background="red";
+    // console.log();
+     var itemList = document.querySelector('#items');
+    //  console.log(itemList.children);
+    //  console.log(itemList.children[1]);
+     itemList.children[1].style.backgroundColor ='yellow';
+
+     //FirstChild
+    //  console.log(itemList.firstChild);
+     itemList.firstChild.style.backgroundColor='red';
+    //  //firstElementChild
+    //  console.log(itemList.firstElementChild);
+    //  itemList.firstElementChild.textContent='Change Element 1';
+     
+    //lastElementChild
+    //  console.log(itemList.lastElementChild);
+    //  itemList.lastElementChild.textContent='Change Element 2';
+    //  itemList.lastElementChild.style.backgroundColor='blue';
+
+     //nextSibiling
+    //  console.log(itemList.nextSibiling);
+
+     //nextElementSibiling
+    //  console.log(itemList.nextElementSibling);
+
+    //previousSilibling
+    // console.log(itemList.previousSibling);
+
+    // //previousElementSibiling
+    // console.log(itemList.previousElementSibling);
+    // itemList.previousElementSibling.style.color='green';
+
+    //createElement
+
+    //create adiv
+    var newDiv=document.createElement('div');
+     
+    //AddClass
+    newDiv.className='hello';
+    
+    //addID
+    newDiv.id='hello1';
+     
+    //addAttribute
+    newDiv.setAttribute('title','Hello Div');
+     
+    //create text node
+    var newDivText =document.createTextNode('Hello World');
+
+    //add text to div
+    newDiv.appendChild(newDivText);
+
+    var container= document.querySelector('header .container');
+    var h1=document.querySelector('header h1');
+
+    console.log(newDiv);
+    newDiv.style.frontSize = '30px';
+    container.insertBefore(newDiv,h1);
+
+
+
 
     
     
